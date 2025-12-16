@@ -36,7 +36,7 @@ ALLOWED_HOSTS = [
     'render.com',
 ]
 
-# Note: The Django development server only supports HTTP, not HTTPS.
+# Note: The Django development server only supports HTTP, not HTTPS. Hello
 # If you see ERR_SSL_PROTOCOL_ERROR or 'You're accessing the development server over HTTPS',
 # make sure you are using http://127.0.0.1:8000/ and not https://127.0.0.1:8000/ in your browser.
 # If your browser keeps redirecting to HTTPS, clear your cache or try a different browser.

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +21,37 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-p+f)cz-jm_+fn%x1b385@dd_6i34b^-^_g11&fs_+21wj&8%yk'
+# In production, use an environment variable for SECRET_KEY.
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-p+f)cz-jm_+fn%x1b385@dd_6i34b^-^_g11&fs_+21wj&8%yk')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'www.subodhpandey.com.np',
+    'subodhpandey.com.np',
+    'portfolio-website',
+    'localhost',
+    '127.0.0.1',
+    'render.com',
+]
+
+# Note: The Django development server only supports HTTP, not HTTPS.
+# If you see ERR_SSL_PROTOCOL_ERROR or 'You're accessing the development server over HTTPS',
+# make sure you are using http://127.0.0.1:8000/ and not https://127.0.0.1:8000/ in your browser.
+# If your browser keeps redirecting to HTTPS, clear your cache or try a different browser.
+
+# Production security settings
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = 3600
+else:
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    SECURE_SSL_REDIRECT = False
+    SECURE_HSTS_SECONDS = 0
 
 
 # Application definition
@@ -115,6 +141,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'main/static']
+STATICFILES_DIRS = [BASE_DIR / 'myapp/static']
+# In production, set STATIC_ROOT and run collectstatic
+STATIC_ROOT = BASE_DIR / 'staticfiles'

@@ -27,19 +27,18 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-p+f)cz-jm_+fn%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
 
-ALLOWED_HOSTS = [
-    'www.subodhpandey.com.np',
-    'subodhpandey.com.np',
-    'portfolio-website',
-    'localhost',
-    '127.0.0.1',
-    'render.com',
-]
+ALLOWED_HOSTS = ["*"]
 
 # Note: The Django development server only supports HTTP, not HTTPS. Hello
 # If you see ERR_SSL_PROTOCOL_ERROR or 'You're accessing the development server over HTTPS',
 # make sure you are using http://127.0.0.1:8000/ and not https://127.0.0.1:8000/ in your browser.
 # If your browser keeps redirecting to HTTPS, clear your cache or try a different browser.
+# If your browser automatically redirects http://127.0.0.1:8000/ to https://127.0.0.1:8000/:
+# - Clear your browser cache and site data for 127.0.0.1/localhost
+# - Try a different browser or private/incognito mode
+# - Disable browser extensions that force HTTPS (like HTTPS Everywhere)
+# - Make sure you are not using a proxy or VPN that rewrites HTTP to HTTPS
+# - The Django development server only supports HTTP, not HTTPS
 
 # Production security settings
 if not DEBUG:
@@ -68,6 +67,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -75,6 +75,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'demo.urls'
 
@@ -142,6 +143,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'myapp/static']
-# In production, set STATIC_ROOT and run collectstatic
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

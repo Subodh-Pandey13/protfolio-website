@@ -1,0 +1,48 @@
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+    color: #000;
+    max-width: 900px;
+    margin: 40px auto;
+    line-height: 1.7;
+}
+
+/* Navigation */
+.navbar {
+    margin-bottom: 40px;
+}
+
+.nav-item {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+/* Home layout */
+.home-container {
+    display: flex;
+    gap: 40px;
+}
+
+
+/* Text */
+.text-section h1 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+.text-section a {
+    color: black;
+    text-decoration: underline;
+}
+
+.photo-section img {
+    width: 160px;   /* reduce size */
+    height: auto;   /* keep proportions */
+    border-radius: 6px;
+}

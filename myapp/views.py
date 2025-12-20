@@ -13,8 +13,8 @@ def research(request):
 def teaching(request):
     return render(request, 'teaching.html')
 
-def codeanddata(request):
-    return render(request, 'codeanddata.html')
+def blog(request):
+    return render(request, 'blog.html')
 
 def contact(request):
     return render(request, 'contact.html')

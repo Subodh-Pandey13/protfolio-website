@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-p+f)cz-jm_+fn%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com","www.subodhpandey.com.np","subodhpandey.com.np"]
 
 # Note: The Django development server only supports HTTP, not HTTPS. Hello
 # If you see ERR_SSL_PROTOCOL_ERROR or 'You're accessing the development server over HTTPS',

@@ -35,40 +35,41 @@
     p.abstract {
         line-height: 1.5;
         margin-bottom: 10px;
-        font-size: 16px; /* smaller font size */
+        font-size: 13px; /* smaller font size */
     }
 
     .links a {
         display: inline-block;
-        margin-right: 15px;
+        margin-right: 10px;
         margin-bottom: 10px;
         padding: 8px 15px;
         background-color: #2980b9;
         color: #fff;
         text-decoration: none;
-        border-radius: 5px;
-        font-size: 16px;
+        border-radius: 15px;
+        font-size: 13px;
         border: none;
         cursor: pointer;
         transition: background 0.2s;
         box-shadow: 0 2px 6px rgba(39,174,96,0.08);
+        font-weight: normal; 
     }
 
     button.show-abstract {
         display: inline-block;
-        margin-right: 15px;
+        margin-right: 10px;
         margin-bottom: 10px;
         padding: 8px 15px;
         background-color: #227b46;
         color: #fff;
         text-decoration: none;
-        border-radius: 3px;
+        border-radius: 15px;
         font-size: 13px;
         border: 0.5px solid #0b522b;
         cursor: pointer;
         transition: background 0.2s, color 0.2s;
         box-shadow: 0 2px 6px rgba(39,174,96,0.08);
-        font-weight: bold;
+        font-weight: normal;
     }
 
     button.show-abstract:hover {
@@ -122,32 +123,32 @@ function toggleAbstract(id) {
         <li>
             <strong>Does Housing Wealth Influence Consumption Behavior? Nonlinear Evidence from U.S. Households</strong> with Dr. Deniz Baglan.
             <button class="show-abstract" onclick="toggleAbstract('abstract1')">Show Abstract</button>
-            <p class="abstract" id="abstract1" style="display:none;">Abstract for Housing Wealth paper goes here.</p>
+            <p class="abstract" id="abstract1" style="display:none;">This paper examines how housing wealth affects household consumption across the income distribution using Panel Study of Income Dynamics (PSID) data from 2001 to 2021. We apply fixed-effects threshold regression within a quantile regression framework to allow the marginal propensity to consume (MPC) out of housing wealth to vary both by income regime and across the consumption distribution. The analysis uncovers robust nonlinearities: households with annual incomes below approximately $60,000 consistently exhibit no significant consumption response to housing wealth gains, suggesting the presence of binding liquidity constraints. Two distinct income thresholds are identified, around $59,230 and $131,570 segmenting the sample into low, middle, and high-income regimes. In the mean regression, the estimated MPC rises from around zero in the lowest regime to $1.00 in the middle and $2.51 in the highest per $100 of housing wealth. Quantile threshold models reveal even sharper heterogeneity: the upper threshold shifts between $112,000 and $170,000 across quantiles, with MPCs reaching $2.53 to $3.42 among the highest-income and highest-consuming households. These findings show that the ability to convert housing wealth into consumption is concentrated among middle and upper income households, thereby reinforcing consumption inequality. The results call for distributionally aware macroeconomic models and policy interventions that expand credit access and liquidity options for lower-income homeowners.</p>
         </li>
         <li>
             <strong>Implications of Involuntary Commitment Laws for Substance Use Disorder on Treatment Admissions</strong> with Dr. Jevay Grooms.
             <button class="show-abstract" onclick="toggleAbstract('abstract2')">Show Abstract</button>
-            <p class="abstract" id="abstract2" style="display:none;">Abstract for Commitment Laws paper goes here.</p>
+            <p class="abstract" id="abstract2" style="display:none;">Involuntary Commitment law for substance use disorder allows a person diagnosed with drug-related problems to receive treatment without personal consent. With implementation beginning in 1971, 34 states and US territories have enacted this policy, while 16 have not. Thus, this study evaluates whether these laws have had an impact on treatment admissions. Also, we evaluated the differential impact on the number of admissions for substance use disorder by race, gender, and employment types. To achieve these objectives, we used two-way fixed effect regression and staggered difference-in-difference approaches, utilizing the Treatment Episode Dataset (TEDS-A), American Community Survey (ACS), and National Welfare datasets. Two-way fixed effects results suggest a significant decrease in overall admissions and admissions by gender (both male and female), while suggesting an increase in admissions for full-time workers. The staggered DID suggests a decrease in admissions across all categories; however, the results were not significant; thus, we were not able to make a causal claim. However, it suggests that passing a law may be supplemented with physical infrastructures and implementation strategies to increase the realized effects</p>
         </li>
     </ul>
     <hr>
 
-    <h2>Working Paper</h2>
+    <h2>Work in Progress</h2>
     <ul>
         <li>
             <strong>Who Sacrifices and Who Benefits: Those Working for Wages or those who are Self-employed?</strong>
             <button class="show-abstract" onclick="toggleAbstract('abstract3')">Show Abstract</button>
-            <p class="abstract" id="abstract3" style="display:none;">Abstract for Who Sacrifices paper goes here.</p>
+            <p class="abstract" id="abstract3" style="display:none;">The choice between self-employment and wage-employment has long been debated. Yet, previous literature has primarily focused on risk factors rather than the sacrifices and benefits associated with these two worker classes. Thus, to address this research gap, I investigated the relationship between the worker class and the labor market outcomes using the 2023 American Community Survey (ACS) survey data. This study used the Propensity Score Matching (PSM) technique and revealed that the individuals working for wages and self-employed dedicate almost a similar number of hours/week and weeks/year. However, wage-employed people travel a longer distance to work, resulting in an opportunity cost of around $600 annually. Further, the self-employed individuals earn around $10,308 more than people working for wages, while considering wage income, which increased to around \$28,785 while considering the total income. These findings underscore that, for a similar amount of labor supply, self-employed individuals get significantly greater financial rewards than their wage-employed counterparts, highlighting the economic advantages of self-employment.</p>
         </li>
         <li>
             <strong>Can Pothole Influence Housing Prices? Urban Infrastructure Perspective from Washington, DC</strong>
             <button class="show-abstract" onclick="toggleAbstract('abstract4')">Show Abstract</button>
-            <p class="abstract" id="abstract4" style="display:none;">Abstract for Pothole paper goes here.</p>
+            <p class="abstract" id="abstract4" style="display:none;">A well-maintained roads enhance neighborhood desirability, and the poor infrastructure can reduce property values on that neighborhood. Taking road condition as a proxy for the neighbourhood desirability, I used spatial regression model to evaluate the effect of pothole density on housing price. The data for this study was derived from DC Open data (housing price, pothole service request) and American Community Survey. The OLS, SAR and SEM consistently show that the average distance to the three nearest potholes is positively associated with housing value: an one mile increase in average distance of a house from the potholes is associated with a 10-12% increase in housing value. It indicates that the improvement in road conditions may lead to the increase in property values.</p>
         </li>
          <li>
             <strong>Non-Linear Effect of COVID-19 on Oil Price Returns</strong> with Dr. Deniz Baglan.
             <button class="show-abstract" onclick="toggleAbstract('abstract5')">Show Abstract</button>
-            <p class="abstract" id="abstract5" style="display:none;">Abstract for COVID-19 paper goes here.</p>
+            <p class="abstract" id="abstract5" style="display:none;">Comming Soon...</p>
         </li>
     </ul>
     <hr>
@@ -156,7 +157,7 @@ function toggleAbstract(id) {
         <li>
         <strong>Estimating economic benefits of cover cropping on carbon and nitrogen storage on organic farms</strong> with Dr. Xiangping Liu, Dr. Alexis Racelis and Dr. Puspa Soti. Agroecology and Sustainable Food Systems, 2024.
         <button class="show-abstract" onclick="toggleAbstract('abstract6')">Show Abstract</button>
-        <p class="abstract" id="abstract6" style="display:none;">Abstract for Cover Cropping paper goes here.</p>
+        <p class="abstract" id="abstract6" style="display:none;">The benefits of cover cropping can vary significantly based on soil type, climate condition, and farm management practices. Despite extensive research on cover crop benefits, relatively few studies focus on regions with hot and dry climates. We evaluated the impact of cover crops on soil carbon and nitrogen and the associated net benefits, using data from a randomized experiment on two organic vegetable farms in the arid subtropical Rio Grande Valley of deep South Texas. Our cover crop treatments included sunn hemp, cowpea, sudangrass, and a mixture of the three. We found higher soil carbon and nitrogen additions in the second year of implementing cover crops, with greater nitrogen benefits from legumes in wetter conditions. The economic value from improved soil carbon ranged from $320 to $4,364 per hectare and from added soil nitrogen ranged from $69 to $2,047. The per-hectare cost of cover crop ranges from $387 to $539. When comparing the benefits with costs, we observed a positive return in most cases. Our results indicate the long-term rate of return from implementing cover crops in irrigated organic vegetable systems can potentially be as high as 709% for carbon sequestration and 280% for soil nitrogen enhancement.</p>
         <div class="links">
          <a href="https://doi.org/10.1080/21683565.2025.2469071" target="_blank">Full Paper</a>
         </div>

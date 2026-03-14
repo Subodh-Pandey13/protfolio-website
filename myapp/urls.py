@@ -8,5 +8,6 @@ urlpatterns = [
     path("teaching/", views.teaching, name = "teaching"),
     path("blog/", views.blog, name = "blog"),
     path("contact/", views.contact, name = "contact"),
+    path('lfpr-blogpost/', views.lfpr_blogpost, name='lfpr_blogpost'),
 
 ]

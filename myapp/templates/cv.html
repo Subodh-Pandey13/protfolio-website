@@ -4,17 +4,22 @@
 {% block content %}
 <div class="container" style="margin-top: 40px; background: #fff; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 8px;">
     <h1 style="text-align: center; color: #2c3e50;">Curriculum Vitae</h1>
-    <p>I am Subodh Pandey, a PhD Candidate in Economics at Howard University. 
-        My primary research focus is Applied Microeconomics, including labor and urban economics. I also have interests in Health Economics and Econometrics. 
-        I enjoy exploring economic policies and their real-world impact, combining quantitative analysis with empirical research.</p>
-    <!-- Embedded CV -->
-    <div style="margin-top:20px; text-align:center;">
-        <iframe 
-            src="https://drive.google.com/file/d/1aw3NhNN6NyNnKzb1IxQLK0WTr1VbPJn-/preview"
-            width="90%" 
-            height="600px"
-            style="border:none; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-        </iframe>
-    </div>
+    <p>Please submit the form below to request access to my CV.</p>
+
+    <form action="https://formspree.io/f/xldqkznl" method="post">
+        <input type="hidden" name="_subject" value="CV access request">
+        <input type="hidden" name="request_type" value="CV access">
+
+        <label class="font-weight-bold mt-3" for="cv-name">Name:</label>
+        <input id="cv-name" type="text" name="name" class="form-control" required>
+
+        <label class="font-weight-bold mt-3" for="cv-email">Email:</label>
+        <input id="cv-email" type="email" name="email" class="form-control" required>
+
+        <label class="font-weight-bold mt-3" for="cv-message">Reason for requesting access:</label>
+        <textarea id="cv-message" name="message" rows="4" class="form-control" required></textarea>
+
+        <button type="submit" class="btn btn-primary mt-4">Request CV Access</button>
+    </form>
 </div>
 {% endblock %}

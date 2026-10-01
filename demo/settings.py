@@ -42,9 +42,9 @@ ALLOWED_HOSTS = ["*"]
 
 # Production security settings
 if not DEBUG:
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    SECURE_SSL_REDIRECT = False
     SECURE_HSTS_SECONDS = 3600
 else:
     SESSION_COOKIE_SECURE = False

@@ -2,25 +2,102 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .home-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .home-photo,
+    .home-description {
+        min-width: 0;
+    }
+
+    .home-photo {
+        text-align: center;
+    }
+
+    .home-photo img {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        margin-top: 18px;
+    }
+
+    .contact-details {
+        margin-top: 2rem;
+    }
+
+    .contact-details p {
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .contact-details .contact-name {
+        font-size: 1.2rem;
+    }
+
+    .contact-buttons .btn {
+        opacity: 0.85;
+    }
+
+    .contact-buttons .btn:hover {
+        opacity: 1;
+    }
+
+    @media (max-width: 767.98px) {
+        .home-layout {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+</style>
+
 <div class="container mt-4">
-    <div class="row align-items-center">
-        <!-- Photo Section -->
-        <div class="col-12 col-md-5 text-center mb-3 mb-md-0">
-            <img src="{% static 'images/profile.jpg' %}" alt="Profile Photo" class="img-fluid" style="max-width:400px; height:auto;">
+    <div class="home-layout">
+        <div class="home-photo">
+            <img src="{% static 'images/profile.jpg' %}" alt="Profile Photo" class="img-fluid d-block mx-auto">
+
+            <div class="contact-buttons mt-2">
+                <a class="btn btn-dark btn-sm mr-2" href="https://www.linkedin.com/in/subodh-pandey-bab8b0aa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="btn btn-dark btn-sm" href="https://github.com/Subodh-Pandey13" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-dark btn-sm ml-1" href="https://scholar.google.com/citations?user=vFwLVbgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            </div>
         </div>
 
-        <!-- Description Section -->
-        <div class="col-12 col-md-7">
-            <h1>Subodh Pandey</h1>
-            <p>PhD Candidate in Economics</p>
-            <p> Howard University, Washington, DC</p>
-            <p style="margin-top: 50px;">
-                <strong> Primary Fields:</strong> Labor Economics, Applied Microeconomics
-            </p>
+        <div class="home-description">
+            <p>Welcome!</p>
+
             <p>
-                <strong> Secondary Fields:</strong>  Urban Economics, Health Economics
+                My name is <strong>Subodh Pandey</strong> and I am a <strong>PhD Candidate in Economics</strong> at Howard University.  I also received my MA in Economics from Howard University.
+            </p>
+
+            <p>
+                My research focuses on <strong>labor, urban, and health economics</strong>. My work applies causal inference, econometric, spatial, and machine learning methods to examine questions involving labor market outcomes, household behavior, urban economic conditions, and substance use policy.
+            </p>
+
+            <p>
+                My current research investigates the nonlinear relationships between housing wealth and household consumption, causal effects of involuntary commitment laws on substance use disorder treatment admissions, and the economic consequences of urban infrastructure.
+            </p>
+
+            <p>
+                I am curently working as a <strong>Research Fellow</strong> at the ,<strong>Center for Equitable Economy and Sustianable Society (E2S2)</strong>. I previously interned with the <strong>New Jersey Department of Labor and Workforce Development’s Office of Research and Information</strong>, where I worked on projects involving the Unemployment Insurance Trust Fund and labor law enforcement and compliance.
+            </p>
+
+            <p>
+                Methodologically, I use <strong>applied econometrics, machine learning, and quasi-experimental approaches</strong>, including difference-in-differences, panel data methods, synthetic control, Propensity Score Matching (PSM), and advanced statistical techniques. My quantitative toolkit includes <strong>R, Python, Stata, Cloud Computing, and SQL</strong>.
             </p>
         </div>
+    </div>
+
+    <div class="text-center contact-details">
+        <p class="contact-name"><strong>Subodh Pandey</strong></p>
+        <p>PhD Candidate in Economics</p>
+        <p>Howard University</p>
+        <p>Washington, DC, USA</p>
+        <p>Email: <a href="mailto:subodhpandey027@gmail.com">subodhpandey027@gmail.com</a></p>
     </div>
 </div>
 {% endblock %}
